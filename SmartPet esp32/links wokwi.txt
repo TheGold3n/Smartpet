@@ -1,0 +1,8 @@
+sensores
+https://wokwi.com/projects/476534976790193153
+
+actuadores
+https://wokwi.com/projects/476535314097202177
+
+Hub
+https://wokwi.com/projects/476536095380806657

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "SmartPet Station - Hub Maestro",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc", "top": -40, "left": 280, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:21", "rtc:SDA", "yellow", [ "h40", "v-40" ] ],
+    [ "esp:22", "rtc:SCL", "yellow", [ "h60", "v-40" ] ],
+    [ "esp:5V", "rtc:5V", "red", [ "h80", "v-40" ] ],
+    [ "esp:GND.1", "rtc:GND", "black", [ "h100", "v-40" ] ]
+  ],
+  "dependencies": {}
+}

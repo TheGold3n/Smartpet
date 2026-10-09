@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "SmartPet Station - Nodo Actuadores",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo_tolva", "top": -80, "left": -220, "attrs": {} },
+    { "type": "wokwi-led", "id": "led_bomba", "top": 120, "left": -200, "attrs": { "color": "blue", "label": "BOMBA 12V (IRF520)" } },
+    { "type": "wokwi-resistor", "id": "r_led_bomba", "top": 150, "left": -140, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:13", "servo_tolva:PWM", "green", [ "h-60", "v-60" ] ],
+    [ "esp:5V", "servo_tolva:V+", "red", [ "h-40", "v-80" ] ],
+    [ "esp:GND.1", "servo_tolva:GND", "black", [ "h-20", "v-100" ] ],
+
+    [ "esp:12", "r_led_bomba:1", "cyan", [ "h-40", "v80" ] ],
+    [ "r_led_bomba:2", "led_bomba:A", "cyan", [ "v0" ] ],
+    [ "led_bomba:C", "esp:GND.2", "black", [ "h20", "v-40" ] ]
+  ],
+  "dependencies": {}
+}

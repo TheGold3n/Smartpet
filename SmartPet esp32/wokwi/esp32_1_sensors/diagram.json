@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "SmartPet Station - Nodo Sensores",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw_ir_food", "top": -80, "left": -180, "attrs": { "label": "IR E18-D80NK (Comida)" } },
+    { "type": "wokwi-slide-switch", "id": "sw_float_water", "top": 40, "left": -180, "attrs": { "label": "Flotador (Agua)" } },
+    { "type": "wokwi-pushbutton", "id": "btn_flow", "top": 160, "left": -180, "attrs": { "color": "green", "label": "Pulsos Flujo" } }
+  ],
+  "connections": [
+    [ "sw_ir_food:2", "esp:5", "blue", [ "h80" ] ],
+    [ "sw_ir_food:1", "esp:GND.1", "black", [ "h40", "v40" ] ],
+
+    [ "sw_float_water:2", "esp:19", "cyan", [ "h80" ] ],
+    [ "sw_float_water:1", "esp:GND.1", "black", [ "h40", "v-80" ] ],
+
+    [ "btn_flow:1.1", "esp:23", "gold", [ "h80" ] ],
+    [ "btn_flow:2.1", "esp:GND.1", "black", [ "h40", "v-200" ] ]
+  ],
+  "dependencies": {}
+}

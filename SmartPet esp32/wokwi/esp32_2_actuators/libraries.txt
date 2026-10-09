@@ -1,0 +1,2 @@
+ArduinoJson@^6.21.3
+ESP32Servo@^1.2.1
